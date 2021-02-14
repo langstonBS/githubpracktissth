@@ -18,6 +18,8 @@ jobs:
         run: |
           yarn global add @lhci/cli@0.7.x
           lhci autorun
-        command: | yarn run lhci
+      -name: shit that breaks
+        command: | 
+          yarn run lhci
                  env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN  }}
