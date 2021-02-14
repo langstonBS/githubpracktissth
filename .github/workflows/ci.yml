@@ -1,23 +1,13 @@
-name: CI
-on: [push]
+name: Lighthouse
+on: push
 jobs:
-  lhci:
-    name: Lighthouse
+  lighthouse:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Use Node.js 12.x
-        uses: actions/setup-node@v1
+      - name: Run Lighthouse on urls and upload data to private lhci server
+        uses: treosh/lighthouse-ci-action@v7
         with:
-          node-version: 12.x
-      - name: yarn, build
-        run: |
-          yarn
-          yarn run build
-      - name: run Lighthouse CI
-        run: |
-          yarn global add @lhci/cli@0.7.x
-          lhci autorun
-
-                 env:
-          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN  }}
+          urls: 'https://example.com/'
+          serverBaseUrl: ${{ secrets.LHCI_SERVER_URL }}
+          serverToken: ${{ secrets.LHCI_SERVER_TOKEN }}
