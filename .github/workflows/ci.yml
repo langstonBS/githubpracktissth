@@ -13,8 +13,7 @@ jobs:
       - name: yarn, build
         run: |
           yarn
-          yarn build
-
+          yarn run build
       - name: run Lighthouse CI
         run: |
           yarn global add @lhci/cli@0.7.x
