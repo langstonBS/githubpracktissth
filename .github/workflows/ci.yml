@@ -24,5 +24,4 @@ jobs:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN  }}
       - run:
           name: lhci autorun
-          command: |
             yarn run lhci
