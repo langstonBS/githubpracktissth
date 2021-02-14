@@ -14,7 +14,6 @@ jobs:
         run: |
           yarn
           yarn build
-        - name: shit that breaks
         command: | 
           yarn run lhci
       - name: run Lighthouse CI
