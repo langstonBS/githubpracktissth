@@ -15,4 +15,4 @@ jobs:
           npm install -g @lhci/cli@0.7.x
           lhci autorun
                  env:
-          LHCI_GITHUB_APP_TOKEN: 2191dad4790b0b58ee5c3c8084303f5126b2b32e
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
