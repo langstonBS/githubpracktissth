@@ -12,8 +12,8 @@ jobs:
           node-version: 10.x
       - name: run Lighthouse CI
         run: |
-          npm install -g @lhci/cli@0.7.x
+          yarn -g @lhci/cli@0.7.x
           lhci autorun
-          npm run build
+          yarn build
                  env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN  }}
