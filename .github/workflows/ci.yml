@@ -14,12 +14,13 @@ jobs:
         run: |
           yarn
           yarn build
+        - name: shit that breaks
+        command: | 
+          yarn run lhci
       - name: run Lighthouse CI
         run: |
           yarn global add @lhci/cli@0.7.x
           lhci autorun
-      - name: shit that breaks
-        command: | 
-          yarn run lhci
+
                  env:
           LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN  }}
