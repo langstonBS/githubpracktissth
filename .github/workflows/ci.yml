@@ -1,13 +1,20 @@
-name: Lighthouse
-on: push
+name: CI
+on: [push]
 jobs:
-  lighthouse:
+  lhci:
+    name: Lighthouse
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Run Lighthouse on urls and upload data to private lhci server
-        uses: treosh/lighthouse-ci-action@v7
+      - name: Use Node.js 10.x
+        uses: actions/setup-node@v1
         with:
-          urls: 'https://example.com/'
-          serverBaseUrl: ${{ secrets.LHCI_SERVER_URL }}
-          serverToken: ${{ secrets.LHCI_SERVER_TOKEN }}
+          node-version: 10.x
+      - name: npm install, build
+        run: |
+          npm install
+          npm run build
+      - name: run Lighthouse CI
+        run: |
+          npm install -g @lhci/cli@0.7.x
+          lhci autorun
