@@ -5,6 +5,5 @@ on:
       jobs:
         build:
         runs-on: ubuntu-latest
-        uses: actions/checkout@v1
         - name: this is my name 
             run: echo 'I am dev'
