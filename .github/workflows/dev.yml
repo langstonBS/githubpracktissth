@@ -1,8 +1,7 @@
 name: dev
 on: 
   push:  
-    branches:
-        - 'dev'
+      if: github.ref == 'ref/heads/dev' 
       jobs:
         build:
         runs-on: ubuntu-latest
