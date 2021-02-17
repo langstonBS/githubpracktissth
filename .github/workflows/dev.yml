@@ -8,6 +8,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
+    - name: Run a multi-line script
       run: |
        echo "I am on dev"
-       echo "lets see if it works "
+       echo "lets see if it works"
+       echo "usess needs to be blocked out by a name"
