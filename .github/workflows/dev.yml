@@ -1,7 +1,7 @@
 name: dev
 on: 
   push:  
-    branch:  
+    branches:  
       - dev
       jobs:
       run: echo 'I am dev'
