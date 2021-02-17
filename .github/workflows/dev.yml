@@ -1,5 +1,7 @@
 name: dev
 on: [push]
+branches: 
+  - 'dev'
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
