@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: Run a multi-line script
+    - name: run a turd factory
       run: |
        echo "I am on dev"
        echo "lets see if it works"
