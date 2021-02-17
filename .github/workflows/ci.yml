@@ -15,7 +15,7 @@ jobs:
           npm install
           npm run build
       - name: run Lighthouse CI
-        run: echo 'I am here '
         run: |
           npm install -g @lhci/cli@0.7.x
           lhci autorun
+          echo 'I am here '
