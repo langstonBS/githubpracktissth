@@ -1,6 +1,6 @@
 name: dev
 on: [push] 
-      if: github.ref == 'ref/heads/dev' 
+      # if: github.ref == 'ref/heads/dev' 
         jobs:
           check-bats-version:
             runs-on: ubuntu-latest
