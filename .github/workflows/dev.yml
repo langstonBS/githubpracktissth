@@ -4,4 +4,7 @@ on:
     branches:  
       - dev
       jobs:
-      run: echo 'I am dev'
+        build:
+        runs-on: ubuntu-latest
+        - name: this is my name 
+            run: echo 'I am dev'
