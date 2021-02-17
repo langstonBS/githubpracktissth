@@ -1,6 +1,5 @@
 name: dev
-on: 
-  push:  
+on: [push] 
       if: github.ref == 'ref/heads/dev' 
         jobs:
           check-bats-version:
