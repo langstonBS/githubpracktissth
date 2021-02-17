@@ -3,4 +3,5 @@ on:
   push:  
     branch:  
       - dev
+      jobs:
       run: echo 'I am dev'
