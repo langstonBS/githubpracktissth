@@ -1,0 +1,6 @@
+name: dev
+on: 
+  push:  
+  ``branch:  
+      - dev
+      run: echo 'I am dev'
